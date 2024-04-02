@@ -1,4 +1,4 @@
-import { useQuery } from "react-query";
+import { useQuery,useQueryClient  } from "react-query";
 import { useState } from "react";
 import EventForm from "./EventForm";
 import getEventsRequest from "../api/getEventsRequest";
@@ -38,11 +38,16 @@ export default function AdminPanel (){
         }
       );
 
+      const queryClient = useQueryClient();
+
+
       const submitEvent = (data)=> {
         addEventRequest(data);
       }
       const deleteEvent= (data)=>{
         deleteEventRequest(data);
+        queryClient.invalidateQueries('events');
+
       }
 
       const submitJob = (data)=> {
@@ -50,6 +55,8 @@ export default function AdminPanel (){
       }
       const deleteJob =(data)=>{
         deleteJobRequest(data);
+        queryClient.invalidateQueries('jobs');
+
       }
 
     return(

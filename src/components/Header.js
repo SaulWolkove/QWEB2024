@@ -1,26 +1,37 @@
-import { Link, useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom'; 
+import {useState} from "react";
 
 
-export default function Header(){
+export default function Header({current}){
 
-    const linkStyle = {
-    background: "none",
-    border: "none",
-    cursor: "pointer",
-    transition: "color 2s ease, font-size .7s ease",
-    }
+    
     const navigate = useNavigate();   
     
     const banner = {
         zIndex:"1000",
     }
 
+    const handleNavigate=(link)=>{
+        navigate(link);
+    }
+
+    const linkStyle =(buttonName)=> {
+        return {
+            background: "none",
+            border: "2px",
+            cursor: "pointer",
+            color: buttonName === current ? "#a89291": "black",
+            textDecoration: buttonName === current ? "underline" : "none",
+
+        }
+    }
+
     return(
         <div style = {banner}>
-            <button onClick={()=>navigate("/")} style={linkStyle}>About Us</button>
-            <button onClick={()=>navigate("/team")} style={linkStyle}>Team</button>
-            <button onClick={()=>navigate("/events")} style={linkStyle}>Events</button>
-            <button onClick={()=>navigate("/jobboard")} style={linkStyle}>Job Board</button>
+            <button onClick={()=>handleNavigate("/")} style={linkStyle("home")}>About Us</button>
+            <button onClick={()=>handleNavigate("/team")} style={linkStyle("team")}>Team</button>
+            <button onClick={()=>handleNavigate("/events")} style={linkStyle("events")}>Events</button>
+            <button onClick={()=>handleNavigate("/jobboard")} style={linkStyle("job")}>Job Board</button>
         </div>
     )
 }

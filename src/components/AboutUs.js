@@ -17,7 +17,7 @@ export default function AboutUs() {
         <div id="root" />
         <div id="grad1">
           
-          <div style={{width: '50%', fontSize: '64px', padding: '50px 10px', fontFamily: 'Montserrat, sans-serif'}}> <Header/>Queen's Black Computer Science Society</div>
+          <div style={{width: '50%', fontSize: '64px', padding: '50px 10px', fontFamily: 'Montserrat, sans-serif'}}> <Header current={"home"}/>Queen's Black Computer Science Society</div>
           <div style={{width: '50%', fontSize: '24px', padding: '0px 10px', fontFamily: 'Roboto, sans-serif'}}>We are the organization that provides supportive space for black students pursuing their passion for technology.</div>
           <div style={{width: '50%', fontSize: '36px', paddingTop: '100px', paddingBottom: '30px', paddingLeft: '50px', fontFamily: 'Montserrat, sans-serif'}}>Our Goals</div>
           <div className="grid-container">

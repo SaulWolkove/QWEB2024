@@ -9,7 +9,7 @@ export default function Team() {
         <div id="root" />
         <div id="block">
           
-          <div style={{fontSize: '36px', padding: '20px 10px', fontFamily: 'Montserrat, sans-serif', backgroundColor: '#C2E2FF'}}><Header/>Meet The Team</div>
+          <div style={{fontSize: '36px', padding: '20px 10px', fontFamily: 'Montserrat, sans-serif', backgroundColor: '#C2E2FF'}}><Header current={"team"}/>Meet The Team</div>
           <div style={{padding: '5px'}} />
           <div style={{position: 'absolute', right: '0px', width: '40%', padding: '15px', backgroundColor: '#C2E2FF'}} />
           <div className="grid-container" style={{paddingTop: '100px'}}>

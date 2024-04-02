@@ -39,7 +39,7 @@ export default function Events() {
       <div id="root" />
       <div id="grad1">
         
-        <div style={{fontSize: '64px', paddingTop: '20px', paddingLeft: '10px', fontFamily: 'Montserrat, sans-serif'}}><Header/>Upcoming</div>
+        <div style={{fontSize: '64px', paddingTop: '20px', paddingLeft: '10px', fontFamily: 'Montserrat, sans-serif'}}><Header current={"events"}/>Upcoming</div>
         <div style={{fontSize: '64px', paddingLeft: '10px', fontFamily: 'Montserrat, sans-serif'}}>Events!</div>
         <div className="grid-container" style={{padding: '150px'}}>
           {events && events.length > 0 && !isLoading ? events.map((event)=>(
