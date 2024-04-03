@@ -27,120 +27,124 @@
     <title>React App</title>
     <style>
       ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
       }
 
       li {
-        float: left;
+          float: left;
       }
 
       li a {
-        font-family: Montserrat, sans-serif;
-        display: block;
-        color: black;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
+          font-family: Montserrat, sans-serif;
+          display: block;
+          color: black;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
       }
 
       li a:hover {
-        text-decoration-line: underline;
-        text-underline-offset: 2px;
+          text-decoration-line: underline;
+          text-underline-offset: 2px;
       }
 
       .active {
-        text-decoration-line: underline;
-        text-underline-offset: 2px;
+          text-decoration-line: underline;
+          text-underline-offset: 2px;
       }
 
       #block {
-        position:absolute;
-        width:100%;
-        padding:0;
-        margin:0;
-        top:0;
-        left:0;
+          width:100%;
+          padding:0;
+          margin:0;
+          top:0;
+          left:0;
+      }
+
+      .grid-container-cochair {
+          display: grid;
+          grid-template-columns: auto auto;
+          padding-left: 100px;
+          padding-right: 100px;
+          column-gap: 150px;
+          row-gap: 50px;
       }
 
       .grid-container {
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        padding-left: 100px;
-        padding-right: 100px;
-        column-gap: 150px;
-        row-gap: 50px;
+          display: grid;
+          grid-template-columns: auto auto auto auto;
+          padding-left: 100px;
+          padding-right: 100px;
+          column-gap: 150px;
+          row-gap: 50px;
       }
+
       .grid-item {
-        font-size: 30px;
-        font-family: Montserrat, sans-serif;
+          font-size: 30px;
+          font-family: Montserrat, sans-serif;
       }
-      </style>
+  </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <div id="block">
-      <ul style="padding-bottom: 40px;">
-        <li><a href="index.html">Who Are We?</a></li>
-        <li><a class="active" href="meet the team.html">Meet The Team</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="#job opportunities">Job Opportunities</a></li>
-      </ul>
-      <div style="font-size:36px; padding:20px 10px; font-family: Montserrat, sans-serif;background-color: #C2E2FF;">Meet The Team</div>
-      <div style="padding:5px;"></div>
-      <div style="position: absolute;right: 0px;width:40%; padding:15px; background-color: #C2E2FF;"></div>
-      
-      <div class="grid-container" style="padding-top:100px;">
-        <div class="grid-item">
-          <div style="border-radius: 15px;background-color: rgba(235, 235, 235, 1);height:150px"></div>
-          <div style="padding-top:10px;">Grace Odunga</div>
-          <div style="font-size: 20px; padding-top:5px;">Co-chair</div>
+        <div style="font-size: 36px; padding: 20px 10px; font-family: Montserrat, sans-serif; background-color: #C2E2FF;"><Header current={"team"} />Meet The Team</div>
+        <div style="padding: 5px"></div>
+        <div style="position: absolute; right: 0px; width: 40%; padding: 15px; background-color: #C2E2FF"></div>
+        <div class="grid-container-cochair" style="padding-top: 100px">
+            <div class="grid-item">
+                <div style="border-radius: 15px; background-color: rgba(235, 235, 235, 1); height: 150px"></div>
+                <div style="padding-top: 10px">Grace Odunga</div>
+                <div style="font-size: 20px; padding-top: 5px">Co-chair</div>
+            </div>
+            <div class="grid-item">
+                <div style="border-radius: 15px; background-color: rgba(235, 235, 235, 1); height: 150px"></div>
+                <div style="padding-top: 10px">Al-Barr Ajiboye</div>
+                <div style="font-size: 20px; padding-top: 5px">Co-chair</div>
+            </div>
         </div>
-        <div class="grid-item">
-          <div style="border-radius: 15px;background-color: rgba(235, 235, 235, 1);height:150px"></div>
-          <div style="padding-top: 10px;">Al-Barr Ajiboye</div>
-          <div style="font-size: 20px; padding-top:5px;">Co-chair</div>
-        </div>
-        <div class="grid-item">
-          <div style="border-radius: 15px;background-color: rgba(235, 235, 235, 1);height:150px"></div>
-          <div style="padding-top: 10px;">Rahel Efrem</div>
-          <div style="font-size: 20px; padding-top:5px;">Marketing Director</div>
-        </div>
-        <div class="grid-item">
-          <div style="border-radius: 15px;background-color: rgba(235, 235, 235, 1);height:150px"></div>
-          <div style="padding-top: 10px;">Jordan Harpe</div>
-          <div style="font-size: 20px; padding-top:5px;">Marketing Coordinator</div>
-        </div>
-        <div class="grid-item">
-          <div style="border-radius: 15px;background-color: rgba(235, 235, 235, 1);height:150px"></div>
-          <div style="padding-top: 10px;">Salma Snur</div>
-          <div style="font-size: 20px; padding-top:5px;">Finance Coordinator</div>
-        </div>
-        <div class="grid-item">
-          <div style="border-radius: 15px;background-color: rgba(235, 235, 235, 1);height:150px"></div>
-          <div style="padding-top: 10px;">Danne Mohamed</div>
-          <div style="font-size: 20px; padding-top:5px;">Logistics Coordinator</div>
-        </div>
-        <div class="grid-item">
-          <div style="border-radius: 15px;background-color: rgba(235, 235, 235, 1);height:150px"></div>
-          <div style="padding-top: 10px;">Zen Kingsley</div>
-          <div style="font-size: 20px; padding-top:5px;">Marketing Coordinator</div>
-        </div>
-        <div class="grid-item">
-          <div style="border-radius: 15px;background-color: rgba(235, 235, 235, 1);height:150px"></div>
-          <div style="padding-top: 10px;">Somto Agbodjan</div>
-          <div style="font-size: 20px; padding-top:5px;">Marketing Coordinator</div>
-        </div>
-        <div class="grid-item">
-          <div style="border-radius: 15px;background-color: rgba(235, 235, 235, 1);height:150px"></div>
-          <div style="padding-top: 10px;">Daniel Popoola</div>
-          <div style="font-size: 20px; padding-top:5px;">First Year Rep</div>
-        </div>
+        <div class="grid-container" style="padding-top: 100px">
+          <div class="grid-item">
+              <div style="border-radius: 15px; background-color: rgba(235, 235, 235, 1); height: 150px"></div>
+              <div style="padding-top: 10px">Rahel Efrem</div>
+              <div style="font-size: 20px; padding-top: 5px">Marketing Director</div>
+          </div>
+          <div class="grid-item">
+              <div style="border-radius: 15px; background-color: rgba(235, 235, 235, 1); height: 150px"></div>
+              <div style="padding-top: 10px">Jordan Harpe</div>
+              <div style="font-size: 20px; padding-top: 5px">Marketing Coordinator</div>
+          </div>
+          <div class="grid-item">
+              <div style="border-radius: 15px; background-color: rgba(235, 235, 235, 1); height: 150px"></div>
+              <div style="padding-top: 10px">Salma Snur</div>
+              <div style="font-size: 20px; padding-top: 5px">Finance Coordinator</div>
+          </div>
+          <div class="grid-item">
+              <div style="border-radius: 15px; background-color: rgba(235, 235, 235, 1); height: 150px"></div>
+              <div style="padding-top: 10px">Danne Mohamed</div>
+              <div style="font-size: 20px; padding-top: 5px">Logistics Coordinator</div>
+          </div>
+          <div class="grid-item">
+              <div style="border-radius: 15px; background-color: rgba(235, 235, 235, 1); height: 150px"></div>
+              <div style="padding-top: 10px">Zen Kingsley</div>
+              <div style="font-size: 20px; padding-top: 5px">Marketing Coordinator</div>
+          </div>
+          <div class="grid-item">
+              <div style="border-radius: 15px; background-color: rgba(235, 235, 235, 1); height: 150px"></div>
+              <div style="padding-top: 10px">Somto Agbodjan</div>
+              <div style="font-size: 20px; padding-top: 5px">Marketing Coordinator</div>
+          </div>
+          <div class="grid-item">
+              <div style="border-radius: 15px; background-color: rgba(235, 235, 235, 1); height: 150px"></div>
+              <div style="padding-top: 10px">Daniel Popoola</div>
+              <div style="font-size: 20px; padding-top: 5px">First Year Rep</div>
+          </div>
       </div>
-      <div style="padding:20px"></div>
+      <div style="padding: 20px"></div>
     </div>
   </body>
 </html>
