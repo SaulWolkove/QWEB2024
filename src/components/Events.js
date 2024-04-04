@@ -58,7 +58,7 @@ export default function Events() {
               </div>
             </div>
           )): <div>
-                No Events At This Time
+                ...No Events At This Time
               </div>
           }
         </div>

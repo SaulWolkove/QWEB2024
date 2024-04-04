@@ -1,5 +1,6 @@
-import { useQuery,useQueryClient  } from "react-query";
-import { useState } from "react";
+import { useQuery,useQueryClient,useMutation   } from "react-query";
+import { useState,useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
 import EventForm from "./EventForm";
 import getEventsRequest from "../api/getEventsRequest";
 import getJobsRequest from "../api/getJobsRequest";
@@ -10,8 +11,28 @@ import deleteEventRequest from "../api/deleteEventRequest";
 import deleteJobRequest from "../api/deleteJobRequest";
 
 
+
 export default function AdminPanel (){
 
+  const [authenticated, setAuthenticated] = useState(false);
+
+  const useAuth = () => {
+  
+    useEffect(() => {
+      // Check if JWT token exists in local storage or wherever it's stored
+      const token = localStorage.getItem('token');
+  
+      if (token) {
+        // Token exists, user is authenticated
+        setAuthenticated(true);
+      } else {
+        // Token does not exist, user is not authenticated
+        setAuthenticated(false);
+      }
+    }, []);
+  
+    return authenticated;
+  };
     const [events, setEvents] = useState([]);
 
     const { isLoadingEvents, data: fetchedEvents } = useQuery(
@@ -59,9 +80,11 @@ export default function AdminPanel (){
 
       }
 
+      const navigate = useNavigate()
+
     return(
 
-    <div>
+    useAuth() ? <div>
         <EventForm submitEvent={submitEvent}/>
         <JobForm submitJob={submitJob}/>
 
@@ -109,6 +132,8 @@ export default function AdminPanel (){
             </div>
         </div>
     </div>
+    : navigate("/")
     )
+                
 
 }

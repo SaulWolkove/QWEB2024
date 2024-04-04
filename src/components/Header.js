@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'; 
 import {useState} from "react";
-
+import AdminPanel from './AdminPanel';
+import Login from './Login';
 
 export default function Header({current}){
 
@@ -32,6 +33,8 @@ export default function Header({current}){
             <button onClick={()=>handleNavigate("/team")} style={linkStyle("team")}>Team</button>
             <button onClick={()=>handleNavigate("/events")} style={linkStyle("events")}>Events</button>
             <button onClick={()=>handleNavigate("/jobboard")} style={linkStyle("job")}>Job Board</button>
+            <Login/>
+
         </div>
     )
 }

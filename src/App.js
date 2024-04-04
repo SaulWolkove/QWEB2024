@@ -15,6 +15,7 @@ function App() {
         <Route path="/jobboard" element={<Jobboard/>}/>
         <Route path="/admin" element={<AdminPanel/>}/>
 
+
       </Routes>
     </BrowserRouter>
   )

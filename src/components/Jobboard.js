@@ -2,6 +2,8 @@ import Header from "./Header"
 import getJobsRequest from "../api/getJobsRequest";
 import { useState } from "react";
 import { useQuery } from "react-query";
+import Logo from "../Logo3.png"
+
 export default function Jobboard() {
   
   const [jobs, setJobs] = useState([]);
@@ -20,11 +22,7 @@ export default function Jobboard() {
     }
   );
 
-  const handleMouseEnter = (bio) => {
-    setShowPopup(true);
-    setPopupInfo(bio);
-
-  }
+  
   return !isLoading &&(
       <div>
       <meta charSet="utf-8" />
@@ -43,26 +41,24 @@ export default function Jobboard() {
         
         <div style={{fontSize: '64px', paddingTop: '20px', paddingLeft: '10px', fontFamily: 'Montserrat, sans-serif'}}><Header current={"job"}/>Job Board</div>
         <div style={{fontSize: '64px', paddingLeft: '10px', fontFamily: 'Montserrat, sans-serif', opacity: 0}}>a</div>
-        <div className="grid-container" style={{paddingTop: '150px'}}>
-          {jobs.map((job)=>(
-            <div className="grid-item" onMouseEnter={()=>handleMouseEnter(job.bio)} onMouseLeave={()=>setShowPopup(false)}>
+        <div className="grid-container" style={{paddingTop: '150px',paddingBottom:"5vh"}}>
+          {jobs && jobs.length > 0 && !isLoading ?jobs.map((job)=>(
+            <div className="grid-item">
               <div style={{padding: '10px'}} />
-              <div style={{margin: 'auto', width: '360px', height: '360px', backgroundColor: '#E2E2E2', borderRadius: '15px'}}>
-                <div style={{paddingLeft: '30px', paddingRight: '30px', paddingTop: '80px', fontWeight: 'bold'}}>{job.title}</div>
+              <div style={{margin: 'auto', width: '360px', height: '360px', backgroundColor: '#E2E2E2', borderRadius: '15px',backgroundImage: `url(${Logo})`,backgroundSize:"50%"}}>
               </div>
+              <div style={{paddingLeft: '30px', paddingRight: '30px', paddingTop: '40px', fontWeight: 'bold'}}>{job.title}</div>
+
+              <div style={{padding: '5px',margin: 'auto', width: '360px', paddingTop: '10px',fontSize: '18px'}}>{job.bio}</div>
+
               <div className="grid-container2" style={{margin: 'auto', width: '360px', paddingTop: '10px', fontWeight: 'bold', fontSize: '18px'}}>
+
                 <div style={{padding: '5px'}}>Expires: {job.expiry}</div>
                 <a href={job.link} target="_blank" style={{textDecoration: 'none', float: 'right', color: 'white', textAlign: 'center', padding: '5px 10px', borderRadius: '10000px', fontSize: '20px'}}>APPLY</a>
               </div>
-              <div style={{padding: '10px'}} />
             </div>
-          ))}
+          )):<div>...No Jobs At This Time</div>}
         </div>
-        {showPopup && 
-          <div>
-            {popupInfo}
-          </div>
-        }
       </div>
     </div>
   )
