@@ -23,7 +23,7 @@ export default function Team() {
           <div style={{padding: "5px"}}></div>
           <div style={{position: "absolute", right: "0px", width: "40%", padding: "15px", backgroundColor: "#C2E2FF"}}></div>
           <div className="grid-container-cochair" style={{paddingTop: "100px"}}>
-              <div className="grid-item">
+              <div className="grid-item" >
                   <img src={Grace} width="200em"/>
                   <div style={{paddingTop: "10px"}}>Grace Odunga</div>
                   <div style={{fontSize: "20px", paddingTop: "5px"}}>Co-chair</div>

@@ -24,6 +24,7 @@ const JobForm = ({ submitJob }) => {
       link: '',
       color: ''
     });
+    window.location.reload();
   };
 
   return (
@@ -35,7 +36,7 @@ const JobForm = ({ submitJob }) => {
           <input type="text" name="title" value={formData.title} onChange={handleChange} required />
         </label>
         <label>
-          Date:
+          Date/Time:
           <input type="text" name="date" value={formData.date} onChange={handleChange} required />
         </label><br/><br/>
         <label>
@@ -49,10 +50,6 @@ const JobForm = ({ submitJob }) => {
         <label>
           Link:
           <input type="text" name="link" value={formData.link} onChange={handleChange} required />
-        </label>
-        <label>
-          Color:
-          <input type="color" name="color" value={formData.color} onChange={handleChange} required />
         </label>
         <button type="submit">Add Job</button>
       </form>

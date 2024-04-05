@@ -24,6 +24,8 @@ const EventForm = ({ submitEvent }) => {
       location: '',
       color: ''
     });
+    window.location.reload();
+
   };
 
   return (
@@ -35,7 +37,7 @@ const EventForm = ({ submitEvent }) => {
           <input type="text" name="title" value={formData.title} onChange={handleChange} required />
         </label>
         <label>
-          Date:
+          Date/Time:
           <input type="text" name="date" value={formData.date} onChange={handleChange} required />
         </label>
         <label><br/><br/>
@@ -45,10 +47,6 @@ const EventForm = ({ submitEvent }) => {
         <label>
           Location:
           <input type="text" name="location" value={formData.link} onChange={handleChange} required />
-        </label>
-        <label><br/><br/>
-          Color:
-          <input type="color" name="color" value={formData.color} onChange={handleChange} required />
         </label>
         <button type="submit">Add Event</button>
       </form>

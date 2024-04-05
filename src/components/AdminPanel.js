@@ -131,6 +131,8 @@ export default function AdminPanel (){
                 ))}
             </div>
         </div>
+        <button onClick={()=>navigate("/")}>Return to Home Page</button>
+
     </div>
     : navigate("/")
     )
