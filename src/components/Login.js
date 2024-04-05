@@ -42,8 +42,8 @@ export default function Login(){
     }
 
     return(
-        <div>
-            <button onClick={handleButton}>Admin</button>
+        <div style={{display:"flex"}}>
+            <button onClick={handleButton} style={{backgroundColor:"white",border:"1px solid grey"}}>Admin</button>
             {clicked && 
                 <div>
                     <form onSubmit={(e)=>checkLogin(e)}>

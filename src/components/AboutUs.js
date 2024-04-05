@@ -1,9 +1,9 @@
 import Header from "./Header"
+import Login from "./Login"
 
 export default function AboutUs() {
     return(
-        <>
-            <div>
+      <div>
         <meta charSet="utf-8" />
         <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -32,9 +32,11 @@ export default function AboutUs() {
             </div>
           </div>
           <div style={{padding: '20px'}} />
+          <Login/>
+
         </div>
-        
+
       </div>
-        </>
+
     )
 }

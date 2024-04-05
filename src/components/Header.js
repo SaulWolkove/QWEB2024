@@ -22,8 +22,8 @@ export default function Header({current}){
             border: "2px",
             cursor: "pointer",
             color: buttonName === current ? "#a89291": "black",
-            textDecoration: buttonName === current ? "underline" : "none",
-
+            fontFamily: buttonName === current ? "Monaco" : "none",
+            fontSize: "0.3em",
         }
     }
 
@@ -33,7 +33,6 @@ export default function Header({current}){
             <button onClick={()=>handleNavigate("/team")} style={linkStyle("team")}>Team</button>
             <button onClick={()=>handleNavigate("/events")} style={linkStyle("events")}>Events</button>
             <button onClick={()=>handleNavigate("/jobboard")} style={linkStyle("job")}>Job Board</button>
-            <Login/>
 
         </div>
     )
