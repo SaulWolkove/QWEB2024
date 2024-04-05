@@ -1,4 +1,12 @@
 import Header from "./Header"
+import Daniel from "../Team_headshots/Daniel_Popoola.png";
+import Danne from "../Team_headshots/Danne_Mohamed.png";
+import Grace from "../Team_headshots/Grace_Odunuga.jpg";
+import Rahel from "../Team_headshots/Rahel_Efrem.jpg";
+import Salma from "../Team_headshots/Salma_Shnur.png";
+import Somto from "../Team_headshots/Somto_Agbodjan.jpg";
+import Zen from "../Team_headshots/Zen_Kingsley.png";
+
 
 export default function Team() {
     return(
@@ -13,7 +21,7 @@ export default function Team() {
           <div style={{position: "absolute", right: "0px", width: "40%", padding: "15px", backgroundColor: "#C2E2FF"}}></div>
           <div className="grid-container-cochair" style={{paddingTop: "100px"}}>
               <div className="grid-item">
-                  <div style={{borderRadius: "15px", backgroundColor: "rgba(235, 235, 235, 1)", height: "150px"}}></div>
+                  <div style={{borderRadius: "15px", backgroundColor: "rgba(235, 235, 235, 1)", height: "150px"}}><img src={Grace} width="200em"/></div>
                   <div style={{paddingTop: "10px"}}>Grace Odunga</div>
                   <div style={{fontSize: "20px", paddingTop: "5px"}}>Co-chair</div>
               </div>
@@ -25,37 +33,51 @@ export default function Team() {
           </div>
           <div className="grid-container" style={{paddingTop: "100px"}}>
             <div className="grid-item">
-                <div style={{borderRadius: "15px", backgroundColor: "rgba(235, 235, 235, 1)", height: "150px"}}></div>
+                <div style={{borderRadius: "15px", backgroundColor: "rgba(235, 235, 235, 1)", height: "150px"}}>
+                    <img src={Rahel} style={{maxWidth: "100%", maxHeight: "100%", borderRadius: "15px"}}/>
+                </div>
                 <div style={{paddingTop: "10px"}}>Rahel Efrem</div>
                 <div style={{fontSize: "20px", paddingTop: "5px"}}>Marketing Director</div>
             </div>
             <div className="grid-item">
-                <div style={{borderRadius: "15px", backgroundColor: "rgba(235, 235, 235, 1)", height: "150px"}}></div>
+                <div style={{borderRadius: "15px", backgroundColor: "rgba(235, 235, 235, 1)", height: "150px"}}>
+                    <img src="" style={{maxWidth: "100%", maxHeight: "100%", borderRadius: "15px"}}/>
+                </div>
                 <div style={{paddingTop: "10px"}}>Jordan Harpe</div>
                 <div style={{fontSize: "20px", paddingTop: "5px"}}>Marketing Coordinator</div>
             </div>
             <div className="grid-item">
-                <div style={{borderRadius: "15px", backgroundColor: "rgba(235, 235, 235, 1)", height: "150px"}}></div>
+                <div style={{borderRadius: "15px", backgroundColor: "rgba(235, 235, 235, 1)", height: "150px"}}>
+                    <img src={Salma} style={{maxWidth: "100%", maxHeight: "100%", borderRadius: "15px"}}/>
+                </div>
                 <div style={{paddingTop: "10px"}}>Salma Snur</div>
                 <div style={{fontSize: "20px", paddingTop: "5px"}}>Finance Coordinator</div>
             </div>
             <div className="grid-item">
-                <div style={{borderRadius: "15px", backgroundColor: "rgba(235, 235, 235, 1)", height: "150px"}}></div>
+                <div style={{borderRadius: "15px", backgroundColor: "rgba(235, 235, 235, 1)", height: "150px"}}>
+                    <img src={Danne} style={{maxWidth: "100%", maxHeight: "100%", borderRadius: "15px"}} alt="Rahel Efrem"/>
+                </div>
                 <div style={{paddingTop: "10px"}}>Danne Mohamed</div>
                 <div style={{fontSize: "20px", paddingTop: "5px"}}>Logistics Coordinator</div>
             </div>
             <div className="grid-item">
-                <div style={{borderRadius: "15px", backgroundColor: "rgba(235, 235, 235, 1)", height: "150px"}}></div>
+                <div style={{borderRadius: "15px", backgroundColor: "rgba(235, 235, 235, 1)", height: "150px"}}>
+                    <img src={Zen} style={{maxWidth: "100%", maxHeight: "100%", borderRadius: "15px"}}/>
+                </div>
                 <div style={{paddingTop: "10px"}}>Zen Kingsley</div>
                 <div style={{fontSize: "20px", paddingTop: "5px"}}>Marketing Coordinator</div>
             </div>
             <div className="grid-item">
-                <div style={{borderRadius: "15px", backgroundColor: "rgba(235, 235, 235, 1)", height: "150px"}}></div>
+                <div style={{borderRadius: "15px", backgroundColor: "rgba(235, 235, 235, 1)", height: "150px"}}>
+                    <img src={Somto} style={{maxWidth: "100%", maxHeight: "100%", borderRadius: "15px"}}/>
+                </div>
                 <div style={{paddingTop: "10px"}}>Somto Agbodjan</div>
                 <div style={{fontSize: "20px", paddingTop: "5px"}}>Marketing Coordinator</div>
             </div>
             <div className="grid-item">
-                <div style={{borderRadius: "15px", backgroundColor: "rgba(235, 235, 235, 1)", height: "150px"}}></div>
+                <div style={{borderRadius: "15px", backgroundColor: "rgba(235, 235, 235, 1)", height: "150px",textAlign: "center"}}>
+                    <img src={Daniel} style={{maxWidth: "100%", maxHeight: "100%", borderRadius: "15px",alignSelf:"center"}}/>
+                </div>
                 <div style={{paddingTop: "10px"}}>Daniel Popoola</div>
                 <div style={{fontSize: "20px", paddingTop: "5px"}}>First Year Rep</div>
             </div>
